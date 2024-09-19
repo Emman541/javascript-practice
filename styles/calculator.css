@@ -1,0 +1,27 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+.js-calculation{
+  color: white;
+  font-size: 45px;
+  margin: 15px 0 5px 0;
+}
+button{
+  border-radius: 60px;
+  border: none;
+  height: 60px;
+  width: 60px;
+  font-size: 26px;
+  margin-right: 10px;
+  background-color:gray;
+  color: white;
+}
+.operation{
+  background-color: orange;
+}
+.clear{
+  padding: none;
+  font-size: 17px;
+
+}

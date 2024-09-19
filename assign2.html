@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-second-button">9a</button>
+  <button onclick="buttonGuess('heads')">heads</button>
+  <button onclick="buttonGuess('tails')">tails</button>
+  <p></p>
+  <input type="text" class="input-name" onkeydown="pressEnter(event)" onkeyup="showWord(event)">
+  <button onclick="submitName()">submit</button>
+  <p class="your-name"></p>
+  <script>
+
+    console.log(document.querySelector('button'));
+    console.log(document.querySelector('.js-second-button'));
+    function buttonGuess(guess) {
+      if (guess === 'heads') {
+        document.querySelector('p').innerHTML = 'you chose heads';
+        
+      } else if (guess === 'tails') {
+        document.querySelector('p').innerHTML = 'you chose tails';
+        
+      }
+    }
+    function pressEnter(event) {
+      if (event.key === 'Enter') {
+        submitName()
+        
+      }
+    }
+    function submitName() {
+      let inputName = document.querySelector('.input-name');
+      inputName = inputName.value;
+      document.querySelector('.your-name').innerHTML = `your name is ${inputName}`;
+      if (inputName === '') {
+        document.querySelector('.your-name').innerHTML = `error`;
+        
+      }
+    }
+    function showWord() {
+     if (event.key) {
+      submitName();
+     }
+    }
+  </script>
+</body>
+</html>
